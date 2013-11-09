@@ -34,7 +34,7 @@ LEN = 32
 
 def hash(*keys):
     merge = b'-'.join(keys)
-    hashed = hashlib.sha512(merge).hexdigest()
+    hashed = hashlib.sha512(merge).digest()
     rebased = base64.b64encode(hashed)
     return rebased[:32]
 
