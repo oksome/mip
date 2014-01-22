@@ -3,6 +3,16 @@ mip
 
 A simple password generator using cryptographic hash functions.
 
+### How it works
+
+```
+new_password = hash(paint, secret_keyphrase, secret_file)[:32]
+```
+
+The hash function returns uses sha512 and the result is encoded in base64.
+
+### Sample use
+
 Uses a simple command line utility. Example session :
 ```
 me@mycomputer:~$ mip
